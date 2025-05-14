@@ -1,0 +1,254 @@
+.chat {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.navbar {
+    height: 6.9rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #1b1e35;
+    border-radius: 0 0 2px 2px;
+}
+
+.navbar-content {
+    width: 95%;
+    padding-top: 2.3rem;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbar-info-user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar-info-user-image {
+    height: 2.6rem;
+    width: 2.6rem;
+    border-radius: 100px;
+    border: 1.6px solid white;
+}
+
+.navbar-info-username {
+    font-size: 20px;
+    color: rgb(225, 225, 225);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar-button {
+    position: absolute;
+    right: 6%;
+    gap: 0.2rem;
+    display: flex;
+}
+
+.content {
+    width: 100%;
+    height: 70%;
+}
+
+.content-messages {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 4.95rem;
+    flex-direction: column;
+    overflow-y: auto;
+    /* background-color: brown; */
+    height: 37rem;
+}
+
+.messages-first-user{
+    display: inline-block;
+    margin-right: auto;
+    background-color: #93CBE9;
+    border-radius: 0 30px 30px 30px;
+    max-width: 19rem;
+    margin-left: 7%;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    white-space: normal; 
+}
+
+.messages-second-user {
+    display: inline-block; 
+    background-color: #242740;
+    border-radius: 30px 0 30px 30px;
+    margin-right: 1.4rem;
+    max-width: 19rem;
+    margin-left: auto;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    white-space: normal; 
+}
+
+.message-content {
+    padding: 1rem;
+    padding-bottom: 1.2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+.message-time {
+    position: relative;
+    display: block;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 16px;   
+    bottom: 0.4rem; 
+    right: 1rem; 
+}
+
+.send-messages {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 18%;
+    bottom: 0;
+    align-items: center;
+}
+
+.send-message-content {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+
+    gap: 0.6rem;
+}
+
+.send-message-input {
+    display: flex;
+    border: 2px #15182e solid;
+    flex: 1; 
+    align-items: center;
+    width: 18.5rem;
+    background-color: white;
+    border-radius: 35px;
+    padding: 20px 20px 20px 15px;
+    height: 4.5rem;
+    gap: 0.5rem;
+}
+
+.send-message-input-emoji {
+    border: none;
+    background-color: #15182e;
+    padding: 0.7rem;
+    width: 3.5rem;
+    height: 3.3rem;
+    border-radius: 50px;
+}
+
+.send-message-input-file {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.send-message-input-mesContent {
+    width: 90%;
+    background: none;
+    height: 3rem;
+    font-size: 19px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    outline: none;
+}
+
+.send-message-button-dispatch {     
+    background-color: white;
+    width: 4.3rem;
+    height: 4.rem;
+    border: none;
+    border-radius: 30px;
+    background-color: #15182e;
+    border: 2px #ffffff solid;
+}
+
+.settings {
+    background-color: rgba(110, 209, 252, 0.351);
+    position: absolute;
+    z-index: 10;
+    top: 7rem;
+    width: 100vw;
+}
+
+.list-users {
+    height: 100%;
+    width: 100%;
+    min-height: 43.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-chat-style {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: 3.5%;
+}
+
+.chat-style-img {
+    height: 73px;
+    width: 73px;
+    border-radius: 100px;
+    border: solid 3px rgb(56, 135, 139);
+}
+
+.discprition-sender {
+    width: 100%;
+    min-width: 17rem;
+    display: flex;
+    align-items: baseline;
+    gap: 37%;
+}
+
+.chat-sender-name {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+}
+
+.list-users-btn-add {
+    width: 50vw;
+    background-color: #15182e;
+    padding: 1.5rem 3rem;
+    border-radius: 20px;
+    color: white;
+    font-family: cursive;
+}
+
+.search-add-user-input {
+    display: block;
+    border: 2px #15182e solid;
+    width: 80%;
+    height: 2.9rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: cursive;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: white;
+    border-radius: 19px;
+    padding: 5px 10px;
+    z-index: 10;
+}
+
+.remove-user-btn {
+    background-color: #730000;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: white;
+    font-family: cursive;
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 1rem;
+    z-index: 10;
+}

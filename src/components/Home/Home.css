@@ -1,0 +1,24 @@
+
+.image-home-back {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+}
+
+.home-btn {
+    position: absolute;
+    background-color: rgb(255, 253, 243);
+    width: 21.875rem;
+    height: 4.313rem;
+    border-radius: 28px;
+    font-family: cursive;
+    color: #222648;
+    font-size: 1.3rem;
+    border: none;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
