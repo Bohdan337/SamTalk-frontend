@@ -11,7 +11,7 @@ function Profile() {
     useEffect(() => {
         const fetchProfile = async () => {
             try {
-                const response = await fetch("http://127.0.0.1:8000/api/profile", {
+                const response = await fetch(`${process.env.REACT_APP_API_URL_BASE}/profile`, {
                     method: "GET",
                     headers: {
                         "Authorization": `Bearer ${localStorage.getItem("access_token")}`,
@@ -72,7 +72,7 @@ function Profile() {
 
             formData.append("email", user.email);
 
-            const response = await fetch("http://127.0.0.1:8000/api/profile", {
+            const response = await fetch(`${process.env.REACT_APP_process.env.REACT_APP_API_URL_URL_BASE}/profile`, {
                 method: "PUT",
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem("access_token")}`,

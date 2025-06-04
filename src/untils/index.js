@@ -1,4 +1,7 @@
-const API_BASE = 'http://127.0.0.1:8000/api';
+// const API_BASE = 'http://127.0.0.1:8000/api'
+const API_BASE = process.env.REACT_APP_API_URL;
+
+;
 // import { useNavigate } from "react-router-dom";
 
 
@@ -201,7 +204,7 @@ export const removeUser = async (user, chatId) => {
 
 export const getUserProfile = async (token) => {
     try {
-        const response = await fetch('http://127.0.0.1:8000/api/profile',
+        const response = await fetch(`${API_BASE}/profile`,
             {
                 method: "GET",
                 headers: {

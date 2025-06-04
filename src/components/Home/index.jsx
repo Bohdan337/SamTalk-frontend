@@ -13,7 +13,7 @@ function Home() {
 
   async function refreshTokens() {
     const token=localStorage.getItem("refresh_token");
-    const response=await fetch("http://127.0.0.1:8000/api/token/refresh", {
+    const response=await fetch(`${process.env.REACT_APP_API_URL}/token/refresh`, {
         method: "POST",
         headers:{
             'Content-Type': 'application/json'
