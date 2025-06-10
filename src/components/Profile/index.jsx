@@ -11,7 +11,7 @@ function Profile() {
     useEffect(() => {
         const fetchProfile = async () => {
             try {
-                const response = await fetch(`${process.env.REACT_APP_API_URL_BASE}/api/profile`, {
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/api/profile`, {
                     method: "GET",
                     headers: {
                         "Authorization": `Bearer ${localStorage.getItem("access_token")}`,
