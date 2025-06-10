@@ -46,7 +46,7 @@ function Chat() {
 
     useEffect(() => {
         function connectWebsocket() {
-            const socket = new WebSocket(`${process.env.REACT_APP_WS_URL}/chat/${chatId}/`);
+            const socket = new WebSocket(`${process.env.REACT_APP_WS_URL}/api/chat/${chatId}/`);
             socket.onopen = () => {
                 console.log('Connected to WebSocket Server');
             };

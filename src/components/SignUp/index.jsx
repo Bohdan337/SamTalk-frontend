@@ -35,7 +35,7 @@ function SignUp() {
         setOpenModal(false); 
 
         try {
-            const response = await fetch(`${process.env.REACT_APP_API_URL}/sign_up`, {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/sign_up`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
