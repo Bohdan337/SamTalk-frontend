@@ -7,7 +7,7 @@ const API_BASE = process.env.REACT_APP_API_URL;
 
 export async function refreshTokens() {
     const token = localStorage.getItem("refresh_token");
-    const response = await fetch(`${API_BASE}/token/refresh`, {
+    const response = await fetch(`${API_BASE}/api/2token/refresh`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ export const fetchChats = async () => {
     const token = localStorage.getItem('access_token');
 
     try {
-        const response = await fetch(`${API_BASE}/chats`,
+        const response = await fetch(`${API_BASE}/api/chats`,
             {
                 method: "GET",
                 headers: {
@@ -71,7 +71,7 @@ export const chatDetails = async (id) => {
     const token = localStorage.getItem('access_token');
     
     try {
-        const response = await fetch(`${API_BASE}/chats/${id}`,
+        const response = await fetch(`${API_BASE}/api/chats/${id}`,
             {
                 method: "GET",
                 headers: {
@@ -107,7 +107,7 @@ export const searchUsers = async (query) => {
     const token = localStorage.getItem('access_token');
 
     try {
-        const response = await fetch(`${API_BASE}/user/search?query=${query}`, {
+        const response = await fetch(`${API_BASE}/api/user/search?query=${query}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -142,7 +142,7 @@ export const updateChat = async (chatData) => {
     const token = localStorage.getItem('access_token');
 
     try {
-        const response = await fetch(`${API_BASE}/chats/${chatData.id}`, {
+        const response = await fetch(`${API_BASE}/api/chats/${chatData.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -170,7 +170,7 @@ export const removeUser = async (user, chatId) => {
     const token = localStorage.getItem("access_token");
 
     try {
-        const response = await fetch(`${API_BASE}/chats/${chatId}/remove-member`, {
+        const response = await fetch(`${API_BASE}/api/chats/${chatId}/remove-member`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -204,7 +204,7 @@ export const removeUser = async (user, chatId) => {
 
 export const getUserProfile = async (token) => {
     try {
-        const response = await fetch(`${API_BASE}/profile`,
+        const response = await fetch(`${API_BASE}/api/profile`,
             {
                 method: "GET",
                 headers: {
