@@ -72,7 +72,7 @@ function Profile() {
 
             formData.append("email", user.email);
 
-            const response = await fetch(`${process.env.REACT_APP_API_URL_BASE}/api/profile`, {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/profile`, {  
                 method: "PUT",
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem("access_token")}`,
