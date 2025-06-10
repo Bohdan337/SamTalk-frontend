@@ -39,7 +39,7 @@ function Login() {
         setOpenModal(false); 
 
         try {
-            const response = await fetch(`${process.env.REACT_APP_API_URL}/token`, {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/token`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
