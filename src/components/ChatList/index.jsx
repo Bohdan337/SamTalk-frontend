@@ -23,8 +23,9 @@ function ChatList() {
                 console.log('getChats');
 
                 const result = await fetchChats();
+                console.log('Chats: ', result);
                 const data = result.map((chat) => {
-                    chat.created_at = formatDistance(new Date(chat.messages.at(-1)?.created_at), new Date(), { addSuffix: true });
+                    // chat.created_at = formatDistance(new Date(chat.messages.at(-1)?.created_at), new Date(), { addSuffix: true });
                     return chat;
                 });
                 setChats(data);
