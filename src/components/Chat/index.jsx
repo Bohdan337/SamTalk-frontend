@@ -271,7 +271,7 @@ function Chat() {
                                        
                                         {message.image && (
                                             <img
-                                                src={message.image}
+                                                src={`${message.image}`}
                                                 alt="Sent"
                                             />
                                         )}

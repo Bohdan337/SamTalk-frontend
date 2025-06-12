@@ -129,7 +129,7 @@ function ChatList() {
                     chats.length > 0 ? (
                     chats.map((chat, index) => (
                         <div key={index} className="list-chat-style" style={{ paddingTop: '5%' }} onClick={()=>openChat(chat)}>
-                            <img className="chat-style-img" src={chat.members.filter(p=>p.username!==requestUser?.username)[0].image_url} alt="" />
+                            <img className="chat-style-img" src={`${chat.members.filter(p=>p.username!==requestUser?.username)[0].image_url}`} alt="" />
                             <div className="chat-style-discription">
                                 <div className="discprition-sender">
                                     <h2 className="chat-sender-name">{chat.members.filter(p=>p.username!==requestUser?.username)[0].username}</h2>
