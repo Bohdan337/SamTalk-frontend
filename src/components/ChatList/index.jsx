@@ -30,6 +30,7 @@ function ChatList() {
                 setChats(data);
                 console.log('Receive chats;', result);
             } catch (e) {
+                console.error('Error fetching chats 4:', e);
                 navigate('/login');
             }
         }
